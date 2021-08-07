@@ -34,19 +34,14 @@ const Button = ({
   const colorDanger = ["red-400", "bg-red-500", "text-white"];
   const colorSecondary = ["gray-600", "bg-gray-700", "text-white"];
 
-  switch (color) {
-    case "primary":
-      buttonColor = colorPrimary;
-      break;
-    case "secondary":
-      buttonColor = colorSecondary;
-      break;
-    case "danger":
-      buttonColor = colorDanger;
-      break;
-    default:
-      buttonColor = colorDefault;
-      break;
+  if (color === "primary") {
+    buttonColor = colorPrimary;
+  } else if (color === "secondary") {
+    buttonColor = colorSecondary;
+  } else if (color === "danger") {
+    buttonColor = colorDanger;
+  } else {
+    buttonColor = colorDefault;
   }
 
   let shadowStyle = "shadow-lg";
