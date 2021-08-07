@@ -29,10 +29,31 @@ const Button = ({
 
   let buttonColor = "";
 
-  const colorPrimary = ["blue-600", "bg-blue-700", "text-white"];
-  const colorDefault = ["gray-300", "bg-gray-400", "text-gray-900"];
-  const colorDanger = ["red-400", "bg-red-500", "text-white"];
-  const colorSecondary = ["gray-600", "bg-gray-700", "text-white"];
+  // const colorPrimary = ["blue-600", "bg-blue-700", "text-white"];
+  // const colorDefault = ["gray-300", "bg-gray-400", "text-gray-900"];
+  // const colorDanger = ["red-400", "bg-red-500", "text-white"];
+  // const colorSecondary = ["gray-600", "bg-gray-700", "text-white"];
+
+  const colorPrimary = {
+    static: "blue-600",
+    hover: "bg-blue-700",
+    text: "text-white"
+  }
+  const colorDefault = {
+    static: "gray-300",
+    hover: "bg-gray-400",
+    text: "text-gray-900"
+  }
+  const colorDanger = {
+    static: "red-400",
+    hover: "bg-red-500",
+    text: "text-white"
+  }
+  const colorSecondary = {
+    static: "gray-600",
+    hover: "bg-gray-700",
+    text: "text-white"
+  }
 
   if (color === "primary") {
     buttonColor = colorPrimary;
@@ -47,7 +68,7 @@ const Button = ({
   let shadowStyle = "shadow-lg";
   if (!shadow) { shadowStyle = "shadow-none"}
 
-  let defaultStyle = `bg-${buttonColor[0]} hover:${buttonColor[1]} ${buttonColor[2]} font-semibold ${paddingSize} rounded-md transition-all font-sans font-thin flex ${shadowStyle}`;
+  let defaultStyle = `bg-${buttonColor.static} hover:${buttonColor.hover} ${buttonColor.text} font-semibold ${paddingSize} rounded-md transition-all font-sans font-thin flex ${shadowStyle}`;
   let outlineStyle = `bg-transparent hover:bg-blue-100 hover:border-blue-500 text-blue-700 font-semibold ${paddingSize} border border-blue-500 hover:border-transparent rounded-md transition-all flex ${shadowStyle}`;
   let textStyle = `bg-transparent hover:bg-blue-100 text-blue-700 font-semibold ${paddingSize} border hover:border-transparent rounded-md transition-all border-opacity-0 flex ${shadowStyle}`;
   let icon = "";
