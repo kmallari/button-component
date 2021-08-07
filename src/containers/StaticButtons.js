@@ -8,7 +8,7 @@ function StaticButtons() {
       <div className="grid gap-5 grid-rows-6 md:grid-cols-3 md:grid-rows-4 lg:grid-cols-4 lg:grid-rows-6 md:gap-10">
         <div className="bg-gray-50 p-8 rounded-lg">
           <h2 className="font-mono font-normal">{`<Button />`}</h2>
-          <Button shadow={true} />
+          <Button shadow={true} color="default"/>
         </div>
         <div className="bg-gray-50 p-8 rounded-lg">
           <h2 className="font-mono font-normal">{`<Button variant="outline" />`}</h2>

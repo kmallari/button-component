@@ -29,11 +29,6 @@ const Button = ({
 
   let buttonColor = "";
 
-  // const colorPrimary = ["blue-600", "bg-blue-700", "text-white"];
-  // const colorDefault = ["gray-300", "bg-gray-400", "text-gray-900"];
-  // const colorDanger = ["red-400", "bg-red-500", "text-white"];
-  // const colorSecondary = ["gray-600", "bg-gray-700", "text-white"];
-
   const colorPrimary = {
     static: "blue-600",
     hover: "bg-blue-700",
@@ -71,6 +66,7 @@ const Button = ({
   let defaultStyle = `bg-${buttonColor.static} hover:${buttonColor.hover} ${buttonColor.text} font-semibold ${paddingSize} rounded-md transition-all font-sans font-thin flex ${shadowStyle}`;
   let outlineStyle = `bg-transparent hover:bg-blue-100 hover:border-blue-500 text-blue-700 font-semibold ${paddingSize} border border-blue-500 hover:border-transparent rounded-md transition-all flex ${shadowStyle}`;
   let textStyle = `bg-transparent hover:bg-blue-100 text-blue-700 font-semibold ${paddingSize} border hover:border-transparent rounded-md transition-all border-opacity-0 flex ${shadowStyle}`;
+  
   let icon = "";
   let style = "";
   let iconLeft,
@@ -117,11 +113,19 @@ const Button = ({
     iconLeft = icon;
   }
 
+  // return (
+  //   <button className="bg-red-400 hover:bg-gray-500 text-gray-900 font-semibold px-4 py-2 rounded-md transition-all font-sans font-thin flex shadow-lg">
+  //     <span className="material-icons-round mr-2">{iconLeft}</span>
+  //     {text}
+  //     <span className="material-icons-round ml-2">{iconRight}</span>
+  //   </button>
+  // );
+
   return (
     <button className={style}>
-      <span class="material-icons-round mr-2">{iconLeft}</span>
+      <span className="material-icons-round mr-2">{iconLeft}</span>
       {text}
-      <span class="material-icons-round ml-2">{iconRight}</span>
+      <span className="material-icons-round ml-2">{iconRight}</span>
     </button>
   );
 };
